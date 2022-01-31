@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			div{
+				background-image: url('static/weather.jpg');
+				height: 100%; 	
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		</style>
+
+		<title> Rain Prediction</title>
+		
+	</head>
+	
+	<body>
+		<div class="login">
+			<center><h1>
+			<br>
+				Rain Prediction Using Machine Learning
+			
+			</h1></center>
+			<center>
+				<br>
+				<br>
+				<br>
+			<form action="{{url_for('predict')}}"method="post">
+				<b>Minimum Temperature(in Celsius): <input type="text" name="minTemp"  required="required"/><br><br>
+				Maximum Temperature(in Celsius): <input type="text" name="maxTemp" required="required"/><br><br>
+				Wind Gust Speed(in Kmph): <input type="text" name="windSpeed" required="required"/><br><br>
+				Humidity(%): <input type="text" name="humidity" required="required"/><br><br>
+				<button type="submit">Predict</button></b>
+			</form>
+			
+			<br>
+			<br>
+			<h2>{{prediction_text}}</center></h2>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</center>
+		</div>
+	</body>
+</html>

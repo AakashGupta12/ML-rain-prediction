@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <title>Rain Prediction</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <h1 id="heading">Rain Prediction</h1>
+        <p id="intro">Rain Prediction using Machine Learning</p>
+      </div>
+      <div class="right">
+        <form action="{{url_for('predict')}}"method="post">
+          <input
+            type="number"
+            name="min-temperature"
+            id="boxStyle"
+            placeholder="Minimum Temperature(in Celcius)"
+            required
+          /><br />
+          <input
+            type="number"
+            name="max-temperature"
+            id="boxStyle"
+            placeholder="Maximum Temperature(in Celcius)"
+            required
+          /><br />
+          <input
+            type="number"
+            name="wind-speed"
+            id="boxStyle"
+            placeholder="Wind Gust Speed(in kmph)"
+            required
+          /><br />
+          <input
+            type="number"
+            name="humidity"
+            id="boxStyle"
+            placeholder="Humidity(%)"
+            req
+          /><br/>
+          <button type="submit" id="predict">Predict</button><br /><br />
+          <hr id="line" />
+          <br />
+          </form>
+          <center><span>RESULT:</span></center>
+          <h1></h1>
+        </form>
+        <br />
+        <center><p id="ending"><span><h2>{{prediction_text}}</h2></span></p></center>
+      </div>
+    </div>
+  </body>
+</html>
